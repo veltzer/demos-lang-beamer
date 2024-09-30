@@ -43,7 +43,7 @@ ifeq ($(DO_ALLDEP),1)
 endif # DO_ALLDEP
 
 # beamer
-TEX_SRC:=$(shell find src -name "*.tex")
+TEX_SRC:=$(shell find src -type f -and -name "*.tex")
 TEX_BAS:=$(basename $(TEX_SRC))
 TEX_PDF:=$(addprefix out/,$(addsuffix .pdf,$(TEX_BAS)))
 
