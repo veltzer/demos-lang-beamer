@@ -37,11 +37,6 @@ Q:=@
 #.SILENT:
 endif # DO_MKDBG
 
-# dependency on the makefile itself
-ifeq ($(DO_ALLDEP),1)
-.EXTRA_PREREQS+=$(foreach mk, ${MAKEFILE_LIST},$(abspath ${mk}))
-endif # DO_ALLDEP
-
 # beamer
 TEX_SRC:=$(shell find src -type f -and -name "*.tex")
 TEX_BAS:=$(basename $(TEX_SRC))
@@ -119,8 +114,14 @@ spell_many:
 ############
 # patterns #
 ############
-# beamer
 $(TEX_PDF): out/%.pdf: %.tex scripts/wrapper_pdflatex.py
 	$(info doing [$@])
 	$(Q)mkdir -p $(dir $@)
 	$(Q)scripts/wrapper_pdflatex.py $< $@
+
+##########
+# alldep #
+##########
+ifeq ($(DO_ALLDEP),1)
+.EXTRA_PREREQS+=$(foreach mk, ${MAKEFILE_LIST},$(abspath ${mk}))
+endif # DO_ALLDEP
