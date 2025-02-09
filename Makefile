@@ -114,10 +114,10 @@ spell_many:
 ############
 # patterns #
 ############
-$(TEX_PDF): out/%.pdf: %.tex scripts/wrapper_pdflatex.py
+$(TEX_PDF): out/%.pdf: %.tex
 	$(info doing [$@])
 	$(Q)mkdir -p $(dir $@)
-	$(Q)scripts/wrapper_pdflatex.py $< $@
+	$(Q)pymakehelper wrapper_pdflatex --input_file $< --output_file $@
 
 ##########
 # alldep #
