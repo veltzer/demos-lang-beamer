@@ -1,2 +1,3 @@
 packages=[
+    "texlive-latex-base",
 ]
