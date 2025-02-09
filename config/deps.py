@@ -1,3 +1,4 @@
 packages=[
-    "texlive-latex-base",
+    "texlive-latex-base", # for latex
+    "texlive-latex-recommended", # for beamer
 ]
