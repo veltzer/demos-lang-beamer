@@ -1,3 +1,7 @@
+"""
+Ubuntu system level depenencies for this project
+"""
+
 packages=[
     "texlive-latex-base", # for latex
     "texlive-latex-recommended", # for beamer
