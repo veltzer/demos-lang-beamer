@@ -10,7 +10,7 @@ DO_FMT_MKD_HTM:=1
 # do you want to do 'pdf' from 'mkd'?
 DO_FMT_MKD_PDF:=1
 # do you want to do 'pdf' from 'tex'?
-DO_FMT_TEX_PDF:=1
+DO_FMT_TEX_PDF:=0
 # do you want to do 'pdf' from 'txt'?
 DO_FMT_TXT_PDF:=1
 # do spell check on all?
