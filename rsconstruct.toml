@@ -20,7 +20,7 @@ dep_auto = [
 ]
 src_dirs = ["tera.templates"]
 
-[processor.checker.luacheck]
+[processor.checker.iluacheck]
 src_dirs = ["config"]
 
 # ─── toml / yaml / json ──────────────────────────────────────────────────────
