@@ -5,7 +5,7 @@
 
 description: Demos for the beamer slide system
 
-project website: https://veltzer.github.io/demos-lang-beamer
+project website: <https://veltzer.github.io/demos-lang-beamer>
 
 author: Mark Veltzer
 
